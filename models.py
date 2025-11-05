@@ -1,4 +1,3 @@
-# models.py
 import sqlite3
 
 class Product:
@@ -62,12 +61,4 @@ class Product:
         conn.commit()
         conn.close()
 
-
-conn = sqlite3.connect("data.db")
-cursor = conn.cursor()
-cursor.execute(
-    "CREATE TABLE IF NOT EXISTS Product(id INTEGER PRIMARY KEY, name TEXT, Category TEXT, Price REAL)"
-)
-conn.commit()
-conn.close()
 
